@@ -1,0 +1,36 @@
+.row {
+    margin-left: 20px;
+    color: white;
+}
+
+.row_posters {
+  display: flex; /* to move images from column to row format */
+  overflow-y: hidden;
+  overflow-x: scroll; /* adds a scrollbar */
+  padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row_poster {
+  object-fit: contain; /* maintains aspect ratio if we resize screen */
+  width: 100%; /* makes all the images to 100% of browser.. */
+  max-height: 100px; /* if there is some transform happens then take 450ms */
+  transition: transform 450ms;
+  margin-right: 10px; /* so that image doesnt touch each other */
+}
+
+.row_poster:hover {
+  /* when hover on row_poster..sacle it to 1.08 */
+
+  transform: scale(1.08);
+}
+.row_posterLarge {
+    max-height: 250px;
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.09);
+}
